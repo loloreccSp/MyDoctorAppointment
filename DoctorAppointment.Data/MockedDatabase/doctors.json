@@ -1,14 +1,38 @@
 [
   {
     "DoctorType": 1,
-    "Experiance": 20,
-    "Salary": 0.0,
+    "Experiance": 8,
+    "Salary": 15000.0,
     "Name": "Vasya",
-    "Surname": "Petrov",
-    "Phone": null,
-    "Email": null,
-    "Id": 4,
-    "CreatedAt": "2023-08-07T21:07:48.8151238+03:00",
+    "Surname": "Bobrov",
+    "Phone": "38097142573",
+    "Email": "VasyaBobrov@gmai.com",
+    "Id": 6,
+    "CreatedAt": "2023-11-01T16:49:43.6117209+02:00",
+    "UpdatedAt": "0001-01-01T00:00:00"
+  },
+  {
+    "DoctorType": 2,
+    "Experiance": 2,
+    "Salary": 12000.0,
+    "Name": "Petya",
+    "Surname": "Kirpichev",
+    "Phone": "380797432",
+    "Email": "Krepish@gmai.com",
+    "Id": 9,
+    "CreatedAt": "2023-11-01T20:11:28.2422922+02:00",
+    "UpdatedAt": "0001-01-01T00:00:00"
+  },
+  {
+    "DoctorType": 3,
+    "Experiance": 12,
+    "Salary": 23000.0,
+    "Name": "Vova",
+    "Surname": "Satana",
+    "Phone": "38071406650",
+    "Email": "Batyshka@gmai.com",
+    "Id": 10,
+    "CreatedAt": "2023-11-03T17:12:53.6858694+02:00",
     "UpdatedAt": "0001-01-01T00:00:00"
   }
 ]

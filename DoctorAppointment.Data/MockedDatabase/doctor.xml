@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Base>
+  <Doctor>
+    <Employee>
+      <Name>Pasha</Name>
+      <Surname>Mashina</Surname>
+      <phone>3807312547</phone>
+      <email>Jigyli@gmail.com</email>
+      <doctorType>Dermatologist</doctorType>
+      <Experiance>12</Experiance>
+      <salary>25000</salary>
+    </Employee>
+    <Employee>
+      <Name>Doctor</Name>
+      <Surname>Chaos</Surname>
+      <phone>3807419552</phone>
+      <email>DoctorChaos@gmail.com</email>
+      <doctorType>FamilyDoctor</doctorType>
+      <Experiance>63</Experiance>
+      <salary>70000</salary>
+    </Employee>
+    <Employee>
+      <Name>Stanislav</Name>
+      <Surname>Lodoch</Surname>
+      <phone>3807424698</phone>
+      <email>StasyaPopivasya@gmail.com</email>
+      <doctorType>Paramedic</doctorType>
+      <Experiance>3</Experiance>
+      <salary>12000</salary>
+    </Employee>
+  </Doctor>
+</Base>

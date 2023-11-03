@@ -6,6 +6,8 @@ namespace MyDoctorAppointment.Data.Interfaces
     {
         TSource Create(TSource source);
 
+        TSource CreateXML(TSource source);
+
         TSource? GetById(int id);
 
         TSource Update(int id, TSource source);
@@ -14,6 +16,7 @@ namespace MyDoctorAppointment.Data.Interfaces
 
         bool Delete(int id);
 
-        void ShowInfo(TSource source);
+        TSource ShowInfo(TSource source);
+
     }
 }

@@ -21,6 +21,11 @@ namespace MyDoctorAppointment.Service.Services
             return _doctorRepository.Create(doctor);
         }
 
+        public Doctor CreateXML(Doctor doctor)
+        {
+            return _doctorRepository.CreateXML(doctor);
+        }
+
         public bool Delete(int id)
         {
             return _doctorRepository.Delete(id);
@@ -38,11 +43,14 @@ namespace MyDoctorAppointment.Service.Services
             return doctorViwModels;
         }
 
-        // переделать остальное по аналогии
-
         public Doctor Update(int id, Doctor doctor)
         {
             return _doctorRepository.Update(id, doctor);
+        }
+
+        public Doctor ShowInfo(Doctor doctor)
+        {
+            return _doctorRepository.ShowInfo(doctor);
         }
     }
 }

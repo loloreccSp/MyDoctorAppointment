@@ -7,6 +7,7 @@ namespace MyDoctorAppointment.Service.Interfaces
     {
         Doctor Create(Doctor doctor);
 
+        Doctor CreateXML(Doctor doctor);
         IEnumerable<DoctorViewModel> GetAll();
 
         Doctor? Get(int id);
@@ -14,5 +15,8 @@ namespace MyDoctorAppointment.Service.Interfaces
         bool Delete(int id);
 
         Doctor Update(int id, Doctor doctor);
+
+        Doctor ShowInfo(Doctor doctor);
+
     }
 }

@@ -1,13 +1,22 @@
 ﻿using MyDoctorAppointment.Data.Configuration;
 using MyDoctorAppointment.Data.Interfaces;
 using MyDoctorAppointment.Domain.Entities;
+using System.Xml.Linq;
+using System.Xml.Serialization;
 using Newtonsoft.Json;
+using System.Xml;
+using Formatting = Newtonsoft.Json.Formatting;
+using System.Xml.XPath;
+using Microsoft.VisualBasic;
+using System.Text;
 
 namespace MyDoctorAppointment.Data.Repositories
 {
     public abstract class GenericRepository<TSource> : IGenericRepository<TSource> where TSource : Auditable
     {
         public abstract string Path { get; set; }
+
+        //public abstract string XMLPath { get; set; }
 
         public abstract int LastId { get; set; }
 
@@ -21,6 +30,9 @@ namespace MyDoctorAppointment.Data.Repositories
 
             return source;
         }
+
+
+        public abstract TSource CreateXML(TSource source);
 
         public bool Delete(int id)
         {
@@ -48,11 +60,15 @@ namespace MyDoctorAppointment.Data.Repositories
             }
 
             return JsonConvert.DeserializeObject<List<TSource>>(json)!;
+
+            
         }
 
         public TSource? GetById(int id)
         {
+            
             return GetAll().FirstOrDefault(x => x.Id == id);
+            
         }
 
         public TSource Update(int id, TSource source)
@@ -65,11 +81,13 @@ namespace MyDoctorAppointment.Data.Repositories
             return source;
         }
 
-        public abstract void ShowInfo(TSource source);
+        public abstract TSource ShowInfo(TSource source);
 
         protected abstract void SaveLastId();
 
 
-        protected dynamic ReadFromAppSettings() => JsonConvert.DeserializeObject<dynamic>(File.ReadAllText(Constants.AppSettingsPath));
+        protected dynamic ReadFromAppSettings() => JsonConvert.DeserializeObject<dynamic>(File.ReadAllText(Configuration.Constants.AppSettingsPath));
+        //protected dynamic ReadFromSettingsXML() => XmlConvert.DecodeName(Constants.SettingsPathXML);
+
     }
 }
